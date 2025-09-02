@@ -91,6 +91,16 @@ public class Main {
         elevador1.sair();
         System.out.println("Pessoas no elevador: " + elevador1.getPessoas());
 
+        System.out.println("\n");
+
 //      Classe Agenda
+        Agenda agenda = new Agenda();
+        agenda.adicionarContato("Alan", "0987654321");
+        agenda.adicionarContato("Teste2", "12345678910");
+        agenda.adicionarContato("Teste3", "1234");
+        agenda.listarContatos();
+        agenda.removerContato("Alisson","1234567891"); // retorna contato nao encontrado ( falta um numero no final )
+        agenda.removerContato("Teste3", "1234"); // contato removido!
+        agenda.listarContatos();
     }
 }
