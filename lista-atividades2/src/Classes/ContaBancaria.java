@@ -42,7 +42,7 @@ public class ContaBancaria {
     }
 
     public void sacar(double valor) {
-        if (valor > 0 && this.saldo > valor) {
+        if (valor > 0 && this.saldo >= valor) {
             this.saldo -= valor;
             System.out.println("\nSaque concluído!");
         } else {

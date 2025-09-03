@@ -2,9 +2,6 @@ package Classes;
 import java.util.ArrayList;
 
 public class Agenda {
-    public Agenda() {
-
-    }
 
     ArrayList<Contato> contatos = new ArrayList<>();
 

@@ -1,7 +1,10 @@
 import Classes.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
 //      Classe Pessoa
         Pessoa pessoa1 = new Pessoa();
         pessoa1.setNome("Alan");
@@ -19,17 +22,29 @@ public class Main {
 
         System.out.printf("Valor total: R$%.2f", produto1.calcularTotal());
 
+        System.out.println("\n");
+
 //      Classe Aluno
         Aluno aluno1 = new Aluno("Aluno");
-        aluno1.setNota(6);
+        aluno1.setNota(6.9f);
+        aluno1.setNota(aluno1.getNota());
+
+        if(aluno1.aprovado()) {
+            System.out.println("Aprovado!");
+        } else {
+            System.out.println("Reprovado!");
+        }
+
         System.out.println("O aluno foi aprovado? " + aluno1.aprovado());
 
-        System.out.println("\n");
+        System.out.println();
 
 //      Classe ContaBancaria
         ContaBancaria contaBancaria1 = new ContaBancaria("Titular1", 1234);
         contaBancaria1.exibirSaldo();
         contaBancaria1.depositar(1200);
+        contaBancaria1.exibirSaldo();
+        contaBancaria1.sacar(600);
         contaBancaria1.exibirSaldo();
         contaBancaria1.sacar(600);
         contaBancaria1.exibirSaldo();
@@ -51,7 +66,7 @@ public class Main {
         carro1.frear();
         carro1.status();
 
-        System.out.println("\n");
+        System.out.println();
 
 //      Classe Livro
         Livro livro1 = new Livro("teste", "eu");
@@ -60,13 +75,13 @@ public class Main {
         livro1.emprestar();
         livro1.emprestar();
 
-        System.out.println("\n");
+        System.out.println();
 
 //      Classe Calculadora
         Calculadora calculadora = new Calculadora();
         System.out.println(calculadora.dividir(8,0));
 
-        System.out.println("\n");
+        System.out.println();
 
 //      Classe Elevador
         Elevador elevador1 = new Elevador(3, 6);
@@ -91,7 +106,7 @@ public class Main {
         elevador1.sair();
         System.out.println("Pessoas no elevador: " + elevador1.getPessoas());
 
-        System.out.println("\n");
+        System.out.println();
 
 //      Classe Agenda
         Agenda agenda = new Agenda();
